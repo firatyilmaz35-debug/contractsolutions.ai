@@ -224,3 +224,10 @@ then:
 - All who-we-serve cards now use visual backgrounds
 - Footer links updated to dedicated pages
 - Open Workspace button kept as blue and linked to /workspace
+
+
+## Update 6
+- Open Workspace arrow changed to a straight right arrow and vertically aligned.
+- Added a LinkedIn link area under the footer brand on every page.
+- LinkedIn href is intentionally left as `#` until the exact company LinkedIn URL is provided.
+- About remains unchanged pending the decision on whether to remove it from the top navigation.
