@@ -1421,3 +1421,19 @@ section[id]{scroll-margin-top:96px}
   .contact-page-grid{grid-template-columns:1fr;gap:34px}
   .contact-page-hero{padding:78px 0 72px}
 }
+
+
+/* UPDATE 16 — simplify hero CTAs */
+.hero-primary-links .hero-cta-light{
+  background:#ffffff;
+  color:#1d2b27;
+  border:1.5px solid #2f58d6;
+}
+.hero-primary-links .hero-cta-light:hover{
+  background:#2f58d6;
+  color:#ffffff;
+  border-color:#2f58d6;
+}
+.hero-primary-links .hero-cta-light span{
+  color:inherit;
+}
