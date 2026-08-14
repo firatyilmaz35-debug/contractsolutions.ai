@@ -244,3 +244,19 @@ then:
 - Existing CS logo mark retained; the wordmark now reads **Contract Solutions AI**.
 - Header and footer both use the updated plural brand logo.
 - Logo asset renamed to `contract-solutions-ai-logo.png`.
+
+
+## Update 9
+- Removed the Our Purpose section from the homepage.
+- Removed the now-unused About Us footer link.
+
+
+## Update 10
+- Added dedicated `/solutions` overview page.
+- Added dedicated `/sectors` overview page.
+- Homepage keeps all six featured solutions.
+- Homepage now shows six featured sectors plus `View All Sectors`.
+- Header `Solutions` now opens `/solutions`.
+- Header `Sectors` now opens `/sectors`.
+- Hero `Explore Solutions` opens `/solutions`.
+- Removed FIDIC wording from the Sectors heading; it now reads `Built for complex projects across industries.`

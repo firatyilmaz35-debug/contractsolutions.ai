@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Book a demo with Contract Solutions AI." />
-  <title>Book Demo | Contract Solutions AI</title>
+  <meta name="description" content="Explore the sectors supported by Contract Solutions AI across infrastructure, energy, transport, buildings, airports, marine, water and industrial projects." />
+  <title>Sectors | Contract Solutions AI</title>
   <link rel="icon" href="assets/contract-solution-ai-icon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="product-page">
+<body>
   <header class="site-header">
     <div class="shell nav-wrap">
       <a class="brand" href="/" aria-label="Contract Solutions AI home"><img class="brand-logo" src="assets/contract-solutions-ai-logo.png" alt="Contract Solutions AI"></a>
@@ -19,7 +18,7 @@
       <nav class="main-nav" id="mainNav">
         <a href="/solutions">Solutions</a>
         <a href="/#who-we-serve">Who We Serve</a>
-        <a href="/sectors">Sectors</a>
+        <a href="/sectors" class="active-nav">Sectors</a>
         <a href="/insights">Insights</a>
         <a href="/people">People</a>
       </nav>
@@ -30,29 +29,34 @@
     </div>
   </header>
   <main>
-    <section class="book-demo-section">
-      <div class="shell book-demo-grid">
-        <div>
-          <span class="section-label">BOOK A DEMO</span>
-          <h1>See Contract Solutions AI in action.</h1>
-          <p class="book-demo-lead">Schedule a conversation to explore how Contract Solutions AI can support contract review, claims, delay analysis and change workflows.</p>
-          <div class="book-demo-info">
-            <div><strong>Email</strong><span>hello@contractsolutions.ai</span></div>
-            <div><strong>Location</strong><span>Istanbul, Türkiye</span></div>
-            <div><strong>What to expect</strong><span>A short walkthrough focused on your use cases, workflows and priorities.</span></div>
-          </div>
+    <section class="directory-hero">
+      <div class="shell directory-hero-grid">
+        <div><span class="section-label">SECTORS</span><h1>Built for complex projects across industries.</h1></div>
+        <p>Contract Solutions AI supports contract-heavy projects across infrastructure, transportation, energy, buildings, industrial facilities, airports, marine works, water and petrochemical developments.</p>
+      </div>
+    </section>
+    <section class="sectors-section sectors-directory-section">
+      <div class="shell">
+        
+        <div class="sector-grid sector-grid-expanded">
+          <a class="sector-card sector-link" href="/infrastructure"><span>01</span><h3>Infrastructure</h3><p>Large-scale civil works, highways, bridges, tunnels and public infrastructure programmes.</p></a>
+          <a class="sector-card sector-link" href="/rail-transportation"><span>02</span><h3>Rail &amp; Transportation</h3><p>Railways, metros, roads, logistics corridors and integrated transport projects.</p></a>
+          <a class="sector-card sector-link" href="/energy-power"><span>03</span><h3>Energy &amp; Power</h3><p>Power plants, renewables, substations, transmission lines and energy infrastructure.</p></a>
+          <a class="sector-card sector-link" href="/buildings-real-estate"><span>04</span><h3>Buildings &amp; Real Estate</h3><p>Commercial, residential, hospitality, healthcare and mixed-use developments.</p></a>
+          <a class="sector-card sector-link" href="/industrial-projects"><span>05</span><h3>Industrial Projects</h3><p>Manufacturing plants, process facilities and technically complex industrial works.</p></a>
+          <a class="sector-card sector-link" href="/airports-aviation"><span>06</span><h3>Airports &amp; Aviation</h3><p>Terminal buildings, airside works, runway packages and aviation-support infrastructure.</p></a>
+          <a class="sector-card sector-link" href="/marine-shipbuilding"><span>07</span><h3>Marine &amp; Shipbuilding</h3><p>Ports, jetties, coastal facilities, shipyard works and marine construction packages.</p></a>
+          <a class="sector-card sector-link" href="/water-wastewater"><span>08</span><h3>Water &amp; Wastewater</h3><p>Treatment plants, pipelines, pumping stations and resilient water infrastructure.</p></a>
+          <a class="sector-card sector-link" href="/oil-gas-petrochemicals"><span>09</span><h3>Oil, Gas &amp; Petrochemicals</h3><p>Refineries, terminals, pipelines, storage facilities and downstream energy assets.</p></a>
         </div>
-        <div class="book-demo-card">
-          <h2>Request a demo</h2>
-          <form class="demo-form">
-            <label>Full name<input type="text" placeholder="Your name" /></label>
-            <label>Work email<input type="email" placeholder="name@company.com" /></label>
-            <label>Company<input type="text" placeholder="Your company" /></label>
-            <label>What would you like to explore?<textarea rows="5" placeholder="Contract review, claim preparation, delay analysis, workspace modules..."></textarea></label>
-            <button class="button button-dark" type="button">Submit Request <span>→</span></button>
-            <small>Static demo page — connect the form to your backend or CRM later.</small>
-          </form>
-        </div>
+      </div>
+    </section>
+    <section class="contact-strip">
+      <div class="shell contact-grid contact-grid-expanded">
+        <h2>Apply contract intelligence to your sector.</h2>
+        <p>Explore how Contract Solutions AI can support project-specific contract, claim and delay workflows.</p>
+        <div class="contact-address"><strong>Contact</strong><span>Head Office: Istanbul, Türkiye</span><a href="mailto:hello@contractsolutions.ai">hello@contractsolutions.ai</a></div>
+        <a class="button button-dark" href="/book-demo">Book a Demo <span>→</span></a>
       </div>
     </section>
   </main>
@@ -98,7 +102,7 @@
         <h4>Company</h4>
         <a href="/people">People</a>
         <a href="/insights">Insights</a>
-        <a href="/#contact">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
       <div class="newsletter">
         <h4>Newsletter</h4>
