@@ -18,10 +18,6 @@ if (menuToggle && mainNav) {
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const WORKSPACE_URL = "https://app.contractsolutions.ai";
-document.querySelectorAll(".workspace-link").forEach((link) => {
-  link.href = WORKSPACE_URL;
-});
 
 const newsletterForm = document.getElementById("newsletterForm");
 const newsletterStatus = document.getElementById("newsletterStatus");

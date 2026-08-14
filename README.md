@@ -173,3 +173,43 @@ After extracting the ZIP, run from that extracted folder:
 `npx.cmd vercel link`
 then:
 `npx.cmd vercel --prod`
+
+
+## Update 1
+- All six Solutions now link to dedicated pages:
+  - /contract-preparation-review
+  - /claim-preparation
+  - /delay-eot-analysis
+  - /variation-change-orders
+  - /arbitration-dispute-support
+  - /fidic-nec-contract-intelligence
+- Footer Solutions list updated to all six solutions across the site.
+- Homepage hero hierarchy updated:
+  - AI-Powered Contract Intelligence enlarged.
+  - A Unified AI-Powered Workspace for Contract, Claim and Delay Management reduced for readability.
+- Open Workspace button changed to logo-matched blue.
+
+
+## Update 2
+- Open Workspace now points to the internal `/workspace` page.
+- Added a dedicated workspace landing page at `/workspace`.
+- Removed the secondary `Book a Demo` button from the homepage hero.
+- Header `Book Demo` remains unchanged.
+- Workspace landing page is ready to connect to the real AI application later.
+
+
+## Update 3
+- Increased all section overline labels to the same visual scale as `AI-POWERED CONTRACT INTELLIGENCE`.
+- Applies consistently to labels such as:
+  - OUR PURPOSE
+  - FEATURED SOLUTIONS
+  - WHO WE SERVE
+  - SECTORS
+  - INSIGHTS
+  - PEOPLE
+  - THE CHALLENGE
+  - KEY CAPABILITIES
+  - WORKFLOW
+  - DESIGNED FOR
+  - WORKSPACE MODULES
+- Dark-section overlines retain readable light colouring.
