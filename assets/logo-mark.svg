@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="24" y1="20" x2="92" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9C49A"/>
+      <stop offset="1" stop-color="#A98651"/>
+    </linearGradient>
+    <linearGradient id="green" x1="16" y1="14" x2="104" y2="106" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173D34"/>
+      <stop offset="1" stop-color="#0E3028"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="112" height="112" rx="28" fill="url(#green)"/>
+  <rect x="4" y="4" width="112" height="112" rx="28" stroke="#E9DFC9" stroke-opacity=".22" stroke-width="1.5"/>
+
+  <!-- Outer contract frame -->
+  <path d="M36 32h33l15 15v41H36V32Z" stroke="#F5EEE2" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M69 32v15h15" stroke="#F5EEE2" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- Stylized C -->
+  <path d="M65 50c-4-4-10-6-16-4-9 3-14 13-11 22 3 9 13 14 22 11 3-1 6-3 8-5" stroke="url(#gold)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Stylized S / solution ribbon -->
+  <path d="M58 53c3-3 9-3 12 0 3 3 2 7-3 9l-7 3c-5 2-6 6-3 9 4 4 11 4 15 0" stroke="#F5EEE2" stroke-width="5" stroke-linecap="round"/>
+</svg>

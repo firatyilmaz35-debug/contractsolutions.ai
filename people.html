@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="People behind Contract Solution AI." />
+  <title>People | Contract Solution AI</title>
+  <link rel="icon" href="assets/logo-mark.svg" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .people-hero{
+      background:#f4f4f0;
+      padding:92px 0 78px;
+      border-bottom:1px solid #e7ebe8;
+    }
+    .people-hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:80px;
+      align-items:end;
+    }
+    .people-hero h1{
+      margin:14px 0 0;
+      font:400 clamp(58px,6vw,86px)/.98 var(--serif);
+      letter-spacing:-.03em;
+      color:var(--ink);
+    }
+    .people-hero p{
+      margin:0 0 8px;
+      max-width:560px;
+      font-size:15px;
+      line-height:1.75;
+      color:#58645f;
+    }
+    .people-intro{
+      padding:88px 0 48px;
+    }
+    .people-intro-grid{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:90px;
+      align-items:start;
+    }
+    .people-intro h2{
+      margin:12px 0 0;
+      font:400 44px/1.05 var(--serif);
+      color:var(--ink);
+    }
+    .people-intro p{
+      margin:0;
+      max-width:760px;
+      font-size:15px;
+      line-height:1.8;
+      color:#57635e;
+    }
+    .people-grid-section{
+      padding:28px 0 104px;
+    }
+    .people-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .person-card{
+      border:1px solid #dfe4e1;
+      background:#fff;
+      min-height:420px;
+      display:flex;
+      flex-direction:column;
+    }
+    .person-photo{
+      min-height:265px;
+      background:
+        linear-gradient(145deg,rgba(14,48,40,.05),rgba(14,48,40,.2)),
+        linear-gradient(135deg,#dfe5e1,#aebdb6);
+      position:relative;
+      overflow:hidden;
+    }
+    .person-photo:before{
+      content:"";
+      position:absolute;
+      width:170px;
+      height:170px;
+      border-radius:50%;
+      background:rgba(255,255,255,.42);
+      left:50%;
+      top:44%;
+      transform:translate(-50%,-50%);
+    }
+    .person-photo:after{
+      content:"";
+      position:absolute;
+      width:230px;
+      height:150px;
+      border-radius:120px 120px 20px 20px;
+      background:rgba(255,255,255,.34);
+      left:50%;
+      bottom:-28px;
+      transform:translateX(-50%);
+    }
+    .person-body{
+      padding:22px 22px 24px;
+    }
+    .person-body span{
+      display:block;
+      font-size:9px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#7a8580;
+    }
+    .person-body h3{
+      margin:10px 0 8px;
+      font:400 27px/1.1 var(--serif);
+      color:var(--ink);
+    }
+    .person-body p{
+      margin:0;
+      color:#67726d;
+      font-size:12px;
+      line-height:1.65;
+    }
+    .people-note{
+      margin-top:22px;
+      padding:18px 20px;
+      background:#f4f3ef;
+      border-left:3px solid var(--accent);
+      font-size:12px;
+      color:#5b6762;
+    }
+    .nav-people-active{
+      color:var(--accent)!important;
+    }
+    @media(max-width:900px){
+      .people-hero-grid,.people-intro-grid{grid-template-columns:1fr;gap:32px}
+      .people-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="/" aria-label="Contract Solution AI home"><img class="brand-logo" src="assets/contract-solution-ai-logo.png" alt="Contract Solution AI"></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="/#solutions">Solutions</a>
+        <a href="/#who-we-serve">Who We Serve</a>
+        <a href="/#sectors">Sectors</a>
+        <a href="/insights">Insights</a>
+        <a class="nav-people-active" href="/people">People</a>
+        <a href="/#about">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="button button-outline workspace-link" href="https://app.contractsolutions.ai" target="_blank" rel="noopener">Open Workspace <span>↗</span></a>
+        <a class="button button-dark nav-cta" href="/#contact">Book Demo <span>→</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="people-hero">
+      <div class="shell people-hero-grid">
+        <div>
+          <span class="section-label">PEOPLE</span>
+          <h1>Expertise behind the intelligence.</h1>
+        </div>
+        <p>
+          Contract Solution AI brings together contract-management experience, technology
+          and business development to build practical AI tools for complex projects.
+        </p>
+      </div>
+    </section>
+
+    <section class="people-intro">
+      <div class="shell people-intro-grid">
+        <div>
+          <span class="section-label">OUR TEAM</span>
+          <h2>Built by people who understand projects.</h2>
+        </div>
+        <p>
+          Our aim is to combine sector knowledge with AI capability — not to replace
+          professional judgment, but to make contract teams faster, more consistent and
+          better informed. The platform is being developed around real-world contract,
+          claim, delay and dispute workflows.
+        </p>
+      </div>
+    </section>
+
+    <section class="people-grid-section">
+      <div class="shell">
+        <div class="people-grid">
+          <article class="person-card">
+            <div class="person-photo" aria-hidden="true"></div>
+            <div class="person-body">
+              <span>Leadership</span>
+              <h3>Contract &amp; Claims</h3>
+              <p>Contract strategy, FIDIC, claims, variations, delay and dispute-management expertise.</p>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <div class="person-photo" aria-hidden="true"></div>
+            <div class="person-body">
+              <span>Technology</span>
+              <h3>AI &amp; Product</h3>
+              <p>Product architecture, document intelligence, AI workflows and platform development.</p>
+            </div>
+          </article>
+
+          <article class="person-card">
+            <div class="person-photo" aria-hidden="true"></div>
+            <div class="person-body">
+              <span>Growth</span>
+              <h3>Business Development</h3>
+              <p>Partnerships, market development and collaboration with industry professionals and firms.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="people-note">
+          Individual names, titles and photographs can be added later without changing the page structure.
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-strip">
+      <div class="shell contact-grid">
+        <h2>Let’s connect.</h2>
+        <p>Interested in working with Contract Solution AI, joining the team or exploring a partnership?</p>
+        <a class="button button-dark" href="mailto:hello@contractsolutions.ai">Contact Us <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo-image" src="assets/contract-solution-ai-logo.png" alt="Contract Solution AI">
+        <p>AI-Powered Contract &amp; Claim Management for the built environment.</p>
+      </div>
+
+      <div>
+        <h4>Solutions</h4>
+        <a href="/#solutions">Contract Preparation &amp; Review</a>
+        <a href="/#solutions">Claim Preparation</a>
+        <a href="/#solutions">Delay &amp; EOT Analysis</a>
+      </div>
+
+      <div>
+        <h4>Who We Serve</h4>
+        <a href="/#who-we-serve">Construction Companies</a>
+        <a href="/#who-we-serve">Contract &amp; Claims Consultancies</a>
+        <a href="/#who-we-serve">Law Firms</a>
+        <a href="/#who-we-serve">Design &amp; Engineering</a>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <a href="/insights">Insights</a>
+        <a href="/people">People</a>
+        <a href="/#about">About Us</a>
+        <a href="/#contact">Contact</a>
+      </div>
+
+      <div class="newsletter">
+        <h4>Newsletter</h4>
+        <p>Insights and updates delivered to your inbox.</p>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <span>© <span id="year"></span> Contract Solution AI. All rights reserved.</span>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
