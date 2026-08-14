@@ -231,3 +231,9 @@ then:
 - Added a LinkedIn link area under the footer brand on every page.
 - LinkedIn href is intentionally left as `#` until the exact company LinkedIn URL is provided.
 - About remains unchanged pending the decision on whether to remove it from the top navigation.
+
+
+## Update 7
+- Removed `About` from the main navigation on all pages.
+- Main navigation is now: Solutions | Who We Serve | Sectors | Insights | People | Open Workspace | Book Demo.
+- `About Us` remains available in the footer.
