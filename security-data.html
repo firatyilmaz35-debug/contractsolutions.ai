@@ -3,19 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Book a demo with Contract Solutions AI." />
-  <title>Book Demo | Contract Solutions AI</title>
+  <meta name="description" content="Security and data information for Contract Solutions AI." />
+  <title>Security &amp; Data | Contract Solutions AI</title>
   <link rel="icon" href="assets/contract-solution-ai-icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="product-page">
-  <header class="site-header">
+<body>
+<header class="site-header">
     <div class="shell nav-wrap">
-      <a class="brand" href="/" aria-label="Contract Solutions AI home"><img class="brand-logo" src="assets/contract-solutions-ai-logo.png" alt="Contract Solutions AI"></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <a class="brand" href="#top" aria-label="Contract Solutions AI home"><img class="brand-logo" src="assets/contract-solutions-ai-logo.png" alt="Contract Solutions AI"></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+
       <nav class="main-nav" id="mainNav">
         <a href="/solutions">Solutions</a>
         <a href="/who-we-serve">Who We Serve</a>
@@ -23,40 +27,41 @@
         <a href="/insights">Insights</a>
         <a href="/people">People</a>
       </nav>
+
       <div class="header-actions">
         <a class="button workspace-link workspace-button" href="/workspace">Open Workspace <span class="workspace-arrow">→</span></a>
         <a class="button button-dark nav-cta" href="/book-demo">Book Demo <span>→</span></a>
       </div>
     </div>
   </header>
-  <main>
-    <section class="book-demo-section">
-      <div class="shell book-demo-grid">
-        <div>
-          <span class="section-label">BOOK A DEMO</span>
-          <h1>See Contract Solutions AI in action.</h1>
-          <p class="book-demo-lead">Schedule a conversation to explore how Contract Solutions AI can support contract review, claims, delay analysis and change workflows.</p>
-          <div class="book-demo-info">
-            <div><strong>Email</strong><span>hello@contractsolutions.ai</span></div>
-            <div><strong>Location</strong><span>Istanbul, Türkiye</span></div>
-            <div><strong>What to expect</strong><span>A short walkthrough focused on your use cases, workflows and priorities.</span></div>
-          </div>
-        </div>
-        <div class="book-demo-card">
-          <h2>Request a demo</h2>
-          <form class="demo-form" id="demoForm">
-            <label>Full name<input type="text" name="fullName" placeholder="Your name" required /></label>
-            <label>Work email<input type="email" name="workEmail" placeholder="name@company.com" required /></label>
-            <label>Company<input type="text" name="company" placeholder="Your company" /></label>
-            <label>What would you like to explore?<textarea rows="5" name="message" placeholder="Contract review, claim preparation, delay analysis, workspace modules..."></textarea></label>
-            <button class="button button-dark" type="submit">Submit Request <span>→</span></button>
-            <small id="demoFormStatus">Submitting opens your email client with the request pre-filled.</small>
-          </form>
-        </div>
+<main>
+  <section class="security-hero">
+    <div class="shell security-hero-grid">
+      <div>
+        <span class="section-label">SECURITY &amp; DATA</span>
+        <h1>Professional contract data deserves professional handling.</h1>
       </div>
-    </section>
-  </main>
-  <footer class="site-footer">
+      <p>Security, access, retention, hosting and data-residency requirements can vary by client and deployment. Contract Solutions AI supports deployment-specific controls rather than a one-size-fits-all data model.</p>
+    </div>
+  </section>
+  <section class="security-principles">
+    <div class="shell">
+      <div class="security-grid">
+        <article><span>01</span><h2>Client-controlled access</h2><p>Project access can be aligned with the client’s governance requirements and limited to authorised users.</p></article>
+        <article><span>02</span><h2>Project separation</h2><p>Contract and project information can be organised so different matters and workspaces remain logically separated.</p></article>
+        <article><span>03</span><h2>Source traceability</h2><p>Professional users should be able to review the source documents and records supporting AI-assisted findings.</p></article>
+        <article><span>04</span><h2>Deployment-specific controls</h2><p>Hosting, retention, deletion, residency and enterprise access requirements should be agreed for the applicable production environment.</p></article>
+      </div>
+      <div class="security-note">
+        <span class="section-label">ENTERPRISE ENQUIRIES</span>
+        <h2>Need deployment-specific information?</h2>
+        <p>Contact us to discuss the security, data-handling and access requirements relevant to your organisation and intended deployment.</p>
+        <a class="button button-dark" href="/contact">Contact Us <span>→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
     <div class="shell footer-grid footer-grid-six">
       <div class="footer-brand">
         <img class="footer-logo-image" src="assets/contract-solutions-ai-logo.png" alt="Contract Solutions AI">
@@ -118,6 +123,6 @@
       </div>
     </div>
   </footer>
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

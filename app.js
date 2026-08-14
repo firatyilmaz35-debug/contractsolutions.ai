@@ -78,3 +78,29 @@ if (filterButtons.length && insightItems.length) {
     });
   });
 }
+
+
+// Book Demo mailto fallback
+const demoForm = document.getElementById("demoForm");
+if (demoForm) {
+  demoForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(demoForm);
+    const name = data.get("fullName") || "";
+    const email = data.get("workEmail") || "";
+    const company = data.get("company") || "";
+    const message = data.get("message") || "";
+    const subject = `Demo request - ${company || name || "Contract Solutions AI"}`;
+    const body = [
+      `Name: ${name}`,
+      `Work email: ${email}`,
+      `Company: ${company}`,
+      "",
+      "What I would like to explore:",
+      message
+    ].join("\n");
+    const status = document.getElementById("demoFormStatus");
+    if (status) status.textContent = "Opening your email client...";
+    window.location.href = `mailto:hello@contractsolutions.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}

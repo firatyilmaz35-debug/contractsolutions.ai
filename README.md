@@ -268,3 +268,12 @@ then:
 - Added dedicated `/who-we-serve` landing page.
 - Top navigation now routes Solutions, Who We Serve and Sectors to their own landing pages.
 - `/solutions` and `/sectors` remain canonical landing pages with all detail-page links.
+
+## Update 18 — Final polish
+- Landing page kept intentionally minimal: hero + footer only.
+- Hero headline slightly reduced for readability.
+- Explore Solutions / Who We Serve / Sectors kept as lower-weight secondary CTAs.
+- Added Typical Outputs sections to all six solution detail pages.
+- Replaced the non-functional newsletter block with Trust links.
+- Added a dedicated Security & Data page with deployment-specific, non-certification language.
+- Book Demo form now opens a pre-filled email request as a working fallback.
