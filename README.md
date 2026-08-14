@@ -1,4 +1,4 @@
-# Contract Solution AI — Frontend
+# Contract Solutions AI — Frontend
 
 Bu paket, onayladığınız kurumsal ana sayfa görselinden esinlenerek hazırlanmış, doğrudan yayına alınabilir statik frontend sürümüdür.
 
@@ -107,7 +107,7 @@ This version keeps the same design, but updates:
 
 ## v3 update
 - Any remaining “FAQ” label was replaced with “About”
-- The brand mark/logo was upgraded with a custom SVG monogram for Contract Solution AI
+- The brand mark/logo was upgraded with a custom SVG monogram for Contract Solutions AI
 
 
 ## v4 update
@@ -118,7 +118,7 @@ This version keeps the same design, but updates:
 
 
 ## v5 update
-- Selected blue Contract Solution AI logo added to the site
+- Selected blue Contract Solutions AI logo added to the site
 - `Who We Serve` updated to:
   - Construction Companies
   - Contract & Claims Consultancies
@@ -237,3 +237,10 @@ then:
 - Removed `About` from the main navigation on all pages.
 - Main navigation is now: Solutions | Who We Serve | Sectors | Insights | People | Open Workspace | Book Demo.
 - `About Us` remains available in the footer.
+
+
+## Update 8
+- Brand name standardised everywhere as **Contract Solutions AI**.
+- Existing CS logo mark retained; the wordmark now reads **Contract Solutions AI**.
+- Header and footer both use the updated plural brand logo.
+- Logo asset renamed to `contract-solutions-ai-logo.png`.
