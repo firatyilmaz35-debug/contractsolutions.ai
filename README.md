@@ -213,3 +213,14 @@ then:
   - DESIGNED FOR
   - WORKSPACE MODULES
 - Dark-section overlines retain readable light colouring.
+
+
+## Update 4
+- Section labels enlarged again across the site
+- More meaningful icons for solution and who-we-serve cards
+- Dedicated pages created for each "Who We Serve" audience
+- Dedicated Book Demo page created
+- Contact strip updated with address and email
+- All who-we-serve cards now use visual backgrounds
+- Footer links updated to dedicated pages
+- Open Workspace button kept as blue and linked to /workspace
