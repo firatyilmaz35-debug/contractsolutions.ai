@@ -260,3 +260,11 @@ then:
 - Header `Sectors` now opens `/sectors`.
 - Hero `Explore Solutions` opens `/solutions`.
 - Removed FIDIC wording from the Sectors heading; it now reads `Built for complex projects across industries.`
+
+
+## Update 11
+- Removed Solutions, Who We Serve and Sectors blocks from the homepage.
+- Homepage is now Hero -> Why Contract Solutions AI -> Workspace Preview -> Credibility Band -> Contact -> Footer.
+- Added dedicated `/who-we-serve` landing page.
+- Top navigation now routes Solutions, Who We Serve and Sectors to their own landing pages.
+- `/solutions` and `/sectors` remain canonical landing pages with all detail-page links.
