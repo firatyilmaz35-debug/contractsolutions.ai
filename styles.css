@@ -1483,3 +1483,63 @@ section[id]{scroll-margin-top:96px}
   .premium-home .hero h1{font-size:43px}
   .typical-output-grid,.security-grid{grid-template-columns:1fr}
 }
+
+/* UPDATE 19 — Gardiner-inspired page colour navigation flash */
+.main-nav{
+  align-self:stretch;
+}
+.main-nav a{
+  position:relative;
+  height:74px;
+  display:flex;
+  align-items:center;
+  --nav-accent:#2f58d6;
+}
+.main-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:4px;
+  background:var(--nav-accent);
+  transform:scaleX(0);
+  transform-origin:center;
+  opacity:0;
+  transition:transform .18s ease, opacity .18s ease;
+  pointer-events:none;
+}
+.main-nav a.nav-clicking::after{
+  transform:scaleX(1);
+  opacity:1;
+}
+.main-nav a.nav-arrival::after{
+  animation:navAccentArrival .72s ease both;
+}
+@keyframes navAccentArrival{
+  0%{transform:scaleX(1);opacity:1}
+  68%{transform:scaleX(1);opacity:1}
+  100%{transform:scaleX(0);opacity:0}
+}
+/* The colour cue is intentionally temporary; do not keep the active link blue. */
+.main-nav a.active-nav,
+.main-nav a.nav-active,
+.main-nav a.nav-people-active{
+  color:#27332f !important;
+}
+@media (prefers-reduced-motion:reduce){
+  .main-nav a::after{transition:none}
+  .main-nav a.nav-arrival::after{animation-duration:.01ms}
+}
+@media(max-width:980px){
+  .main-nav{align-self:auto}
+  .main-nav a{
+    height:auto;
+    min-height:42px;
+    width:max-content;
+  }
+  .main-nav a::after{
+    bottom:2px;
+    height:3px;
+  }
+}

@@ -104,3 +104,128 @@ if (demoForm) {
     window.location.href = `mailto:hello@contractsolutions.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
+
+// UPDATE 19 — Gardiner-inspired temporary colour bar for top navigation
+(() => {
+  if (!mainNav) return;
+
+  const navAccents = {
+    solutions: "#2F58D6",       // brand blue
+    "who-we-serve": "#17806D", // teal
+    sectors: "#C58A20",         // warm gold
+    insights: "#C95252",        // brick red
+    people: "#7E5AA6"           // violet
+  };
+
+  const pathGroups = {
+    solutions: [
+      "/solutions",
+      "/contract-preparation-review",
+      "/claim-preparation",
+      "/delay-eot-analysis",
+      "/variation-change-orders",
+      "/arbitration-dispute-support",
+      "/fidic-nec-contract-intelligence"
+    ],
+    "who-we-serve": [
+      "/who-we-serve",
+      "/construction-companies",
+      "/employers-developers",
+      "/contract-claims-consultancies",
+      "/law-firms",
+      "/design-engineering-consultancies"
+    ],
+    sectors: [
+      "/sectors",
+      "/rail-transportation",
+      "/infrastructure",
+      "/energy-power",
+      "/oil-gas-petrochemicals",
+      "/water-wastewater",
+      "/buildings-real-estate",
+      "/airports-aviation",
+      "/industrial-projects",
+      "/marine-shipbuilding"
+    ],
+    insights: ["/insights"],
+    people: ["/people"]
+  };
+
+  const normalisePath = (pathname) => {
+    let path = pathname || "/";
+    path = path.replace(/\/index\.html$/i, "/");
+    path = path.replace(/\.html$/i, "");
+    if (path.length > 1) path = path.replace(/\/$/, "");
+    return path || "/";
+  };
+
+  const currentPath = normalisePath(window.location.pathname);
+  const currentKey = Object.keys(pathGroups).find((key) =>
+    pathGroups[key].includes(currentPath)
+  );
+
+  const navLinks = Array.from(mainNav.querySelectorAll("a[href]"));
+
+  navLinks.forEach((link) => {
+    const hrefPath = normalisePath(new URL(link.href, window.location.href).pathname);
+    const key = hrefPath.replace(/^\//, "");
+    if (!navAccents[key]) return;
+
+    link.dataset.navKey = key;
+    link.style.setProperty("--nav-accent", navAccents[key]);
+  });
+
+  // Carry the same page colour across the navigation so the bar is visible
+  // for a moment on the destination page, then fades away.
+  let arrivalKey = null;
+  try {
+    arrivalKey = sessionStorage.getItem("contractSolutionsNavArrival");
+    sessionStorage.removeItem("contractSolutionsNavArrival");
+  } catch (_) {
+    arrivalKey = null;
+  }
+
+  if (arrivalKey && arrivalKey === currentKey) {
+    const arrivalLink = navLinks.find((link) => link.dataset.navKey === arrivalKey);
+    if (arrivalLink) {
+      arrivalLink.classList.add("nav-arrival");
+      window.setTimeout(() => arrivalLink.classList.remove("nav-arrival"), 800);
+    }
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const key = link.dataset.navKey;
+      if (!key) return;
+
+      // Preserve browser conventions such as Ctrl/Cmd-click, Shift-click,
+      // middle-click and opening links in a new tab.
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        link.target === "_blank"
+      ) return;
+
+      const targetUrl = new URL(link.href, window.location.href);
+      if (targetUrl.origin !== window.location.origin) return;
+
+      event.preventDefault();
+      navLinks.forEach((item) => item.classList.remove("nav-clicking"));
+      link.classList.add("nav-clicking");
+
+      try {
+        sessionStorage.setItem("contractSolutionsNavArrival", key);
+      } catch (_) {
+        // The click animation still works when storage is unavailable.
+      }
+
+      window.setTimeout(() => {
+        window.location.href = targetUrl.href;
+      }, 180);
+    });
+  });
+})();
