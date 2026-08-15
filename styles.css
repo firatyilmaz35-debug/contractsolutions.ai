@@ -1727,3 +1727,86 @@ section[id]{scroll-margin-top:96px}
     width:100%;
   }
 }
+
+
+/* UPDATE 25 — app.contracsolutions.ai Coming Soon workspace */
+.coming-soon-page{
+  margin:0;
+  min-height:100vh;
+  background:#f6f6f2;
+  color:var(--ink);
+}
+.coming-soon-shell{
+  min-height:100vh;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  width:min(1320px,calc(100% - 72px));
+  margin:0 auto;
+  padding:34px 0 28px;
+}
+.coming-soon-brand{
+  display:inline-block;
+  width:290px;
+}
+.coming-soon-brand img{
+  width:100%;
+  height:auto;
+}
+.coming-soon-content{
+  align-self:center;
+  max-width:850px;
+  padding:70px 0 80px;
+}
+.coming-soon-kicker{
+  display:block;
+  margin-bottom:24px;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.13em;
+  color:#2f58d6;
+}
+.coming-soon-content h1{
+  margin:0;
+  font:400 clamp(76px,9vw,138px)/.92 var(--serif);
+  letter-spacing:-.045em;
+  color:var(--ink);
+}
+.coming-soon-content p{
+  max-width:650px;
+  margin:34px 0 0;
+  font-size:18px;
+  line-height:1.65;
+  color:#50605a;
+}
+.coming-soon-line{
+  width:84px;
+  height:5px;
+  margin:38px 0 34px;
+  background:#2f58d6;
+}
+.coming-soon-back{
+  border-color:#2f58d6;
+  background:#fff;
+  color:#2f58d6;
+}
+.coming-soon-back:hover{
+  background:#2f58d6;
+  color:#fff;
+}
+.coming-soon-footer{
+  padding-top:20px;
+  border-top:1px solid #dfe4e1;
+  font-size:12px;
+  color:#77817d;
+  letter-spacing:.04em;
+}
+@media(max-width:640px){
+  .coming-soon-shell{
+    width:min(100% - 36px,1320px);
+    padding:24px 0 22px;
+  }
+  .coming-soon-brand{width:225px}
+  .coming-soon-content{padding:55px 0 65px}
+  .coming-soon-content h1{font-size:68px}
+  .coming-soon-content p{font-size:16px}
+}
