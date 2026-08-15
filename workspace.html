@@ -3,32 +3,127 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contract Solutions AI Workspace — coming soon." />
-  <meta name="robots" content="noindex, nofollow" />
-  <title>Workspace Coming Soon | Contract Solutions AI</title>
+  <meta name="description" content="Contract Solutions AI Workspace is coming soon." />
+  <title>Coming Soon | Contract Solutions AI Workspace</title>
   <link rel="icon" href="assets/contract-solution-ai-icon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .coming-soon-page{background:linear-gradient(180deg,#f7f6f2 0%,#ffffff 100%)}
+    .coming-soon-header .nav-wrap{grid-template-columns:1fr auto;}
+    .coming-soon-header .button{min-width:unset}
+    .coming-soon-hero{
+      min-height:calc(100vh - 74px);
+      display:grid;
+      place-items:center;
+      padding:72px 0 96px;
+    }
+    .coming-soon-card{
+      width:min(920px,100%);
+      background:#fff;
+      border:1px solid #dfe5e1;
+      box-shadow:var(--shadow);
+      padding:56px;
+      display:grid;
+      gap:26px;
+    }
+    .coming-soon-kicker{
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:#5d6a65;
+    }
+    .coming-soon-card h1{
+      margin:0;
+      font:400 clamp(56px,7vw,92px)/.96 var(--serif);
+      letter-spacing:-.035em;
+      color:var(--ink);
+      max-width:760px;
+    }
+    .coming-soon-card p{
+      margin:0;
+      max-width:650px;
+      font-size:18px;
+      line-height:1.65;
+      color:#4d5954;
+    }
+    .coming-soon-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .coming-soon-note{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      padding-top:18px;
+      border-top:1px solid #e6ebe7;
+    }
+    .coming-soon-note div{padding-right:12px}
+    .coming-soon-note strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:11px;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      color:#224dbd;
+    }
+    .coming-soon-note span{
+      font-size:13px;
+      line-height:1.6;
+      color:#5d6863;
+    }
+    @media (max-width:900px){
+      .coming-soon-card{padding:40px 30px}
+      .coming-soon-note{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .coming-soon-hero{padding:38px 0 54px}
+      .coming-soon-card{padding:28px 22px}
+      .coming-soon-card p{font-size:16px}
+      .coming-soon-actions{flex-direction:column;align-items:flex-start}
+      .coming-soon-actions .button{width:100%}
+    }
+  </style>
 </head>
 <body class="coming-soon-page">
-  <main class="coming-soon-shell">
-    <a class="coming-soon-brand" href="https://contractsolutions.ai" aria-label="Contract Solutions AI home">
-      <img src="assets/contract-solutions-ai-logo.png" alt="Contract Solutions AI">
-    </a>
+  <header class="site-header coming-soon-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="https://contractsolutions.ai" aria-label="Contract Solutions AI home">
+        <img class="brand-logo" src="assets/contract-solutions-ai-logo.png" alt="Contract Solutions AI">
+      </a>
+      <div class="header-actions">
+        <a class="button workspace-button current-page-action" href="https://contractsolutions.ai">Back to Website <span class="workspace-arrow">→</span></a>
+      </div>
+    </div>
+  </header>
 
-    <section class="coming-soon-content">
-      <span class="coming-soon-kicker">CONTRACT SOLUTIONS AI WORKSPACE</span>
-      <h1>Coming soon.</h1>
-      <p>
-        Our AI-powered workspace for contract, claim and delay management is currently being prepared for launch.
-      </p>
-      <div class="coming-soon-line" aria-hidden="true"></div>
-      <a class="button coming-soon-back" href="https://contractsolutions.ai">Back to Website <span>→</span></a>
+  <main>
+    <section class="coming-soon-hero">
+      <div class="shell">
+        <div class="coming-soon-card">
+          <span class="coming-soon-kicker">Contract Solutions AI App</span>
+          <h1>Coming soon.</h1>
+          <p>The Contract Solutions AI workspace is currently being prepared. Soon, this platform will provide a dedicated environment for contract review, claims, delay analysis and professional project workflows.</p>
+          <div class="coming-soon-actions">
+            <a class="button button-dark" href="https://contractsolutions.ai/book-demo">Book a Demo <span>→</span></a>
+            <a class="button button-outline" href="https://contractsolutions.ai/contact">Contact Us <span>→</span></a>
+          </div>
+          <div class="coming-soon-note">
+            <div>
+              <strong>Workspace</strong>
+              <span>A dedicated AI-powered environment for contract, claim and delay management.</span>
+            </div>
+            <div>
+              <strong>Launch status</strong>
+              <span>This application is in preparation and will be released soon.</span>
+            </div>
+            <div>
+              <strong>Enquiries</strong>
+              <span>For early access or deployment discussions, please contact the team or book a demo.</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <div class="coming-soon-footer">app.contracsolutions.ai</div>
   </main>
 </body>
 </html>
