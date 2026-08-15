@@ -109,13 +109,42 @@ if (demoForm) {
 (() => {
   if (!mainNav) return;
 
-  const navAccents = {
-    solutions: "#2F58D6",       // brand blue
-    "who-we-serve": "#17806D", // teal
-    sectors: "#C58A20",         // warm gold
-    insights: "#C95252",        // brick red
-    people: "#7E5AA6"           // violet
+  const sectionThemes = {
+    solutions: {
+      accent: "#2F58D6",
+      accentStrong: "#224DBD",
+      accentSoft: "#EDF3FF",
+      accentSoft2: "#DCE7FF"
+    },
+    "who-we-serve": {
+      accent: "#17806D",
+      accentStrong: "#0F6A5B",
+      accentSoft: "#E8F6F2",
+      accentSoft2: "#D1EEE6"
+    },
+    sectors: {
+      accent: "#C58A20",
+      accentStrong: "#A77218",
+      accentSoft: "#FBF3E4",
+      accentSoft2: "#F4E3BF"
+    },
+    insights: {
+      accent: "#C95252",
+      accentStrong: "#AF4040",
+      accentSoft: "#FBECEC",
+      accentSoft2: "#F4D4D4"
+    },
+    people: {
+      accent: "#7E5AA6",
+      accentStrong: "#69478E",
+      accentSoft: "#F2ECF8",
+      accentSoft2: "#E4D8F2"
+    }
   };
+
+  const navAccents = Object.fromEntries(
+    Object.entries(sectionThemes).map(([key, value]) => [key, value.accent])
+  );
 
   const pathGroups = {
     solutions: [
@@ -147,7 +176,7 @@ if (demoForm) {
       "/industrial-projects",
       "/marine-shipbuilding"
     ],
-    insights: ["/insights"],
+    insights: ["/insights", "/security-data"],
     people: ["/people"]
   };
 
@@ -164,7 +193,23 @@ if (demoForm) {
     pathGroups[key].includes(currentPath)
   );
 
+  const defaultThemeKey = currentKey || "solutions";
+  const activeTheme = sectionThemes[defaultThemeKey] || sectionThemes.solutions;
+  document.documentElement.style.setProperty("--section-accent", activeTheme.accent);
+  document.documentElement.style.setProperty("--section-accent-strong", activeTheme.accentStrong);
+  document.documentElement.style.setProperty("--section-accent-soft", activeTheme.accentSoft);
+  document.documentElement.style.setProperty("--section-accent-soft-2", activeTheme.accentSoft2);
+
   const navLinks = Array.from(mainNav.querySelectorAll("a[href]"));
+  const workspaceButton = document.querySelector(".header-actions .workspace-button");
+  const bookDemoButton = document.querySelector(".header-actions .nav-cta");
+
+  if (currentPath === "/workspace" && workspaceButton) {
+    workspaceButton.classList.add("current-page-action");
+  }
+  if (currentPath === "/book-demo" && bookDemoButton) {
+    bookDemoButton.classList.add("current-page-action");
+  }
 
   navLinks.forEach((link) => {
     const hrefPath = normalisePath(new URL(link.href, window.location.href).pathname);
@@ -189,7 +234,7 @@ if (demoForm) {
     const arrivalLink = navLinks.find((link) => link.dataset.navKey === arrivalKey);
     if (arrivalLink) {
       arrivalLink.classList.add("nav-arrival");
-      window.setTimeout(() => arrivalLink.classList.remove("nav-arrival"), 800);
+      window.setTimeout(() => arrivalLink.classList.remove("nav-arrival"), 1050);
     }
   }
 
@@ -225,7 +270,7 @@ if (demoForm) {
 
       window.setTimeout(() => {
         window.location.href = targetUrl.href;
-      }, 180);
+      }, 240);
     });
   });
 })();

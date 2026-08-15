@@ -277,6 +277,3 @@ then:
 - Replaced the non-functional newsletter block with Trust links.
 - Added a dedicated Security & Data page with deployment-specific, non-certification language.
 - Book Demo form now opens a pre-filled email request as a working fallback.
-
-## Update 19
-Added a Gardiner-inspired temporary colour underline to the main navigation. Each top-level section has its own accent colour; the line appears on click, carries onto the destination page briefly, and then retracts.

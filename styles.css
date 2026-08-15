@@ -1484,7 +1484,7 @@ section[id]{scroll-margin-top:96px}
   .typical-output-grid,.security-grid{grid-template-columns:1fr}
 }
 
-/* UPDATE 19 — Gardiner-inspired page colour navigation flash */
+/* UPDATE 20 — Gardiner-style coloured underline on the top navigation */
 .main-nav{
   align-self:stretch;
 }
@@ -1493,39 +1493,45 @@ section[id]{scroll-margin-top:96px}
   height:74px;
   display:flex;
   align-items:center;
+  color:#27332f;
   --nav-accent:#2f58d6;
 }
+/* Gardiner reference: the bar sits at the bottom edge of the header, not under the text itself. */
 .main-nav a::after{
   content:"";
   position:absolute;
   left:0;
   right:0;
-  bottom:0;
-  height:4px;
+  bottom:-1px;
+  height:5px;
   background:var(--nav-accent);
   transform:scaleX(0);
   transform-origin:center;
   opacity:0;
-  transition:transform .18s ease, opacity .18s ease;
+  transition:transform .20s ease, opacity .20s ease;
   pointer-events:none;
 }
-.main-nav a.nav-clicking::after{
-  transform:scaleX(1);
-  opacity:1;
-}
-.main-nav a.nav-arrival::after{
-  animation:navAccentArrival .72s ease both;
-}
-@keyframes navAccentArrival{
-  0%{transform:scaleX(1);opacity:1}
-  68%{transform:scaleX(1);opacity:1}
-  100%{transform:scaleX(0);opacity:0}
-}
-/* The colour cue is intentionally temporary; do not keep the active link blue. */
+/* Show the page colour when the user is actually on / over the navigation item. */
+.main-nav a:hover,
+.main-nav a:focus-visible,
 .main-nav a.active-nav,
 .main-nav a.nav-active,
 .main-nav a.nav-people-active{
   color:#27332f !important;
+}
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after,
+.main-nav a.nav-clicking::after{
+  transform:scaleX(1);
+  opacity:1;
+}
+/* After clicking, repeat the same cue briefly on the destination page, then remove it. */
+.main-nav a.nav-arrival::after{
+  animation:navAccentArrival .95s ease both;
+}
+@keyframes navAccentArrival{
+  0%,68%{transform:scaleX(1);opacity:1}
+  100%{transform:scaleX(0);opacity:0}
 }
 @media (prefers-reduced-motion:reduce){
   .main-nav a::after{transition:none}
@@ -1539,7 +1545,61 @@ section[id]{scroll-margin-top:96px}
     width:max-content;
   }
   .main-nav a::after{
-    bottom:2px;
+    bottom:0;
     height:3px;
+  }
+}
+
+
+/* UPDATE 22 — section-coloured header CTA buttons (Gardiner-inspired) */
+:root{
+  --section-accent:#2f58d6;
+  --section-accent-strong:#224dbd;
+  --section-accent-soft:#edf3ff;
+  --section-accent-soft-2:#dfe9ff;
+}
+
+.header-actions .button{
+  min-width:184px;
+}
+.header-actions .workspace-button{
+  background:#fff;
+  border-color:var(--section-accent);
+  color:var(--section-accent);
+}
+.header-actions .workspace-button:hover,
+.header-actions .workspace-button:focus-visible,
+.header-actions .workspace-button.current-page-action,
+.header-actions .workspace-button.current-workspace{
+  background:var(--section-accent-soft);
+  border-color:var(--section-accent);
+  color:var(--section-accent);
+}
+.header-actions .nav-cta.button-dark{
+  background:var(--section-accent-strong);
+  border-color:var(--section-accent-strong);
+  color:#fff;
+}
+.header-actions .nav-cta.button-dark:hover,
+.header-actions .nav-cta.button-dark:focus-visible{
+  background:var(--section-accent);
+  border-color:var(--section-accent);
+  color:#fff;
+}
+.header-actions .nav-cta.button-dark.current-page-action{
+  background:var(--section-accent);
+  border-color:var(--section-accent);
+  color:#fff;
+  box-shadow:0 10px 22px color-mix(in srgb, var(--section-accent) 24%, transparent);
+}
+@supports not (color: color-mix(in srgb, white 50%, black)){
+  .header-actions .nav-cta.button-dark.current-page-action{
+    box-shadow:0 10px 22px rgba(47,88,214,.18);
+  }
+}
+@media(max-width:980px){
+  .header-actions .button{
+    min-width:unset;
+    width:100%;
   }
 }
