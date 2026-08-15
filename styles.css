@@ -1677,3 +1677,53 @@ section[id]{scroll-margin-top:96px}
     font-size:14px !important;
   }
 }
+
+
+/* UPDATE 24 — shared Let's connect strip across primary pages */
+.contact-strip{
+  background:var(--paper);
+  border-top:1px solid #e2e5e2;
+  border-bottom:0;
+}
+.contact-strip .contact-grid-expanded{
+  grid-template-columns:1.05fr 1.15fr .9fr auto;
+  align-items:center;
+  gap:40px;
+}
+.contact-strip h2{
+  color:var(--ink);
+}
+.contact-strip-button.button-dark{
+  background:var(--section-accent-strong);
+  border-color:var(--section-accent-strong);
+  color:#fff;
+}
+.contact-strip-button.button-dark:hover,
+.contact-strip-button.button-dark:focus-visible{
+  background:var(--section-accent);
+  border-color:var(--section-accent);
+  color:#fff;
+}
+.contact-strip .contact-address strong{
+  color:var(--section-accent-strong);
+}
+@media (max-width:1100px){
+  .contact-strip .contact-grid-expanded{
+    grid-template-columns:1fr 1fr;
+  }
+  .contact-strip .contact-grid-expanded > a{
+    justify-self:start;
+  }
+}
+@media (max-width:720px){
+  .contact-strip .contact-grid-expanded{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .contact-strip .contact-grid-expanded > *{
+    justify-self:start;
+  }
+  .contact-strip-button.button-dark{
+    width:100%;
+  }
+}
