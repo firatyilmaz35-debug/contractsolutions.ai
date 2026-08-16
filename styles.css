@@ -2228,3 +2228,62 @@ section[id]{scroll-margin-top:96px}
   .platform-capability-grid article,.consultancy-service-grid article{min-height:auto;padding:23px 20px}
   .consultancy-boundary-section{padding:28px 0}
 }
+
+
+/* UPDATE 32 — Legal / policy pages */
+.legal-page{background:#fff}
+.legal-hero{
+  background:#f4f4f0;
+  border-bottom:1px solid #e2e7e4;
+  padding:88px 0 76px;
+}
+.legal-hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:72px;
+  align-items:end;
+}
+.legal-hero h1{
+  margin:14px 0 0;
+  font:400 clamp(54px,5vw,76px)/.98 var(--serif);
+  letter-spacing:-.03em;
+  color:var(--ink);
+}
+.legal-hero p{
+  max-width:620px;
+  margin:0;
+  font-size:16px;
+  line-height:1.7;
+  color:#52605a;
+}
+.legal-updated{
+  display:block;
+  margin-top:16px;
+  font-size:11px;
+  color:#7a8580;
+}
+.legal-content{padding:72px 0 96px}
+.legal-content-inner{max-width:880px}
+.legal-section{
+  padding:0 0 34px;
+  margin:0 0 34px;
+  border-bottom:1px solid #e6ebe7;
+}
+.legal-section:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.legal-section h2{
+  margin:0 0 14px;
+  font:400 30px/1.15 var(--serif);
+  color:var(--ink);
+}
+.legal-section p{
+  margin:0 0 12px;
+  font-size:14px;
+  line-height:1.8;
+  color:#4f5c56;
+}
+.legal-section a{color:#2f58d6;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:800px){
+  .legal-hero{padding:60px 0 52px}
+  .legal-hero-grid{grid-template-columns:1fr;gap:28px}
+  .legal-content{padding:54px 0 70px}
+}
