@@ -154,7 +154,9 @@ if (demoForm) {
       "/delay-eot-analysis",
       "/variation-change-orders",
       "/arbitration-dispute-support",
-      "/fidic-nec-contract-intelligence"
+      "/fidic-nec-contract-intelligence",
+      "/subcontract-preparation-management",
+      "/nda-mou-other-agreements"
     ],
     "who-we-serve": [
       "/who-we-serve",

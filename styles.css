@@ -1859,3 +1859,124 @@ section[id]{scroll-margin-top:96px}
     min-height:0;
   }
 }
+
+
+/* UPDATE 29 — Delay & EOT Analysis detailed content system */
+.delay-eot-page .product-description{
+  max-width:690px;
+}
+.delay-eot-page .product-capabilities h2{
+  max-width:880px;
+}
+.delay-eot-page .capability-card-grid article{
+  min-height:335px;
+}
+.delay-eot-page .capability-card-grid h3{
+  margin-top:25px;
+  font-size:21px;
+}
+.delay-eot-page .capability-card-grid p{
+  font-size:11.4px;
+  line-height:1.7;
+}
+.delay-eot-page .typical-output-grid article{
+  min-height:245px;
+}
+.delay-eot-page .typical-output-grid h3{
+  font-size:21px;
+}
+.delay-eot-page .typical-output-grid p{
+  font-size:11.4px;
+  line-height:1.72;
+}
+.programme-source-note{
+  margin-top:20px;
+  max-width:650px;
+  padding:12px 14px;
+  border-left:3px solid #2f58d6;
+  background:#f6f8fb;
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  font-size:11.5px;
+  line-height:1.55;
+}
+.programme-source-note strong{
+  flex:0 0 auto;
+  color:var(--ink);
+}
+.programme-source-note span{
+  color:#65716c;
+}
+.delay-eot-page .product-intro-grid>div:last-child p{
+  max-width:780px;
+}
+.delay-eot-page .product-floating-note{
+  max-width:285px;
+}
+@media(max-width:980px){
+  .delay-eot-page .capability-card-grid article,
+  .delay-eot-page .typical-output-grid article{
+    min-height:0;
+  }
+}
+@media(max-width:640px){
+  .programme-source-note{
+    display:grid;
+    gap:4px;
+  }
+}
+
+
+/* UPDATE 30 — deep solution pages + two new solution agents/modules */
+.deep-solution-page .product-description{
+  max-width:700px;
+}
+.deep-solution-page .product-capabilities h2{
+  max-width:900px;
+}
+.deep-solution-page .capability-card-grid article{
+  min-height:330px;
+}
+.deep-solution-page .capability-card-grid h3{
+  margin-top:25px;
+  font-size:21px;
+}
+.deep-solution-page .capability-card-grid p{
+  font-size:11.4px;
+  line-height:1.72;
+}
+.deep-solution-page .typical-output-grid article{
+  min-height:250px;
+}
+.deep-solution-page .typical-output-grid h3{
+  font-size:21px;
+}
+.deep-solution-page .typical-output-grid p{
+  font-size:11.4px;
+  line-height:1.72;
+}
+.deep-solution-page .product-intro-grid>div:last-child p{
+  max-width:790px;
+}
+.deep-solution-page .product-floating-note{
+  width:285px;
+  max-width:calc(100% - 56px);
+}
+.solutions-overview-grid .solution-card{
+  min-height:300px;
+}
+.solutions-overview-grid .solution-card h3{
+  font-size:20px;
+}
+.solutions-overview-grid .solution-card p{
+  font-size:12px;
+  line-height:1.65;
+}
+@media(max-width:980px){
+  .deep-solution-page .capability-card-grid article,
+  .deep-solution-page .typical-output-grid article,
+  .solutions-overview-grid .solution-card{
+    min-height:0;
+  }
+}

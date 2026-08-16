@@ -71,14 +71,14 @@ En pratik yöntem:
 Alan adınız:
 
 ```text
-contractsolution.ai
+contractsolutions.ai
 ```
 
 ise iki kullanım mümkündür:
 
 ```text
-contractsolution.ai
-www.contractsolution.ai
+contractsolutions.ai
+www.contractsolutions.ai
 ```
 
 Vercel paneli size hangi DNS kayıtlarını girmeniz gerektiğini otomatik gösterir. Apex/root domain için genellikle A kaydı, `www` gibi subdomain için CNAME kaydı istenir.
@@ -277,3 +277,16 @@ then:
 - Replaced the non-functional newsletter block with Trust links.
 - Added a dedicated Security & Data page with deployment-specific, non-certification language.
 - Book Demo form now opens a pre-filled email request as a working fallback.
+
+## Update 30 — expanded Solutions architecture
+- Deepened content for:
+  - Variation & Change Orders
+  - FIDIC & NEC Contract Intelligence
+  - Arbitration & Dispute Support
+- Added new Subcontract Preparation & Management Agent:
+  - `/subcontract-preparation-management`
+- Added new NDA, MOU & Other Agreements solution:
+  - `/nda-mou-other-agreements`
+- Solutions directory now contains eight modules.
+- Footer solution navigation and section-colour routing include both new pages.
+- `Open Workspace` continues to point to `https://app.contractsolutions.ai`.
