@@ -1980,3 +1980,251 @@ section[id]{scroll-margin-top:96px}
     min-height:0;
   }
 }
+
+/* UPDATE 31 — streamlined IA, Key Capabilities, Consultancy, and Industries text */
+@media (min-width:1181px){
+  .site-header .shell{width:min(1240px,calc(100% - 40px))}
+  .site-header .brand-logo{width:205px}
+  .site-header .main-nav{gap:20px;font-size:13px}
+  .site-header .header-actions .button{min-width:148px;padding:0 14px;gap:10px}
+}
+@media (max-width:1180px){
+  .nav-wrap{grid-template-columns:1fr auto}
+  .main-nav,.header-actions{display:none}
+  .menu-toggle{display:block;justify-self:end}
+  .main-nav.open{
+    position:absolute;top:74px;left:0;right:0;display:flex;flex-direction:column;
+    align-items:flex-start;padding:20px 24px;background:#fff;border-bottom:1px solid #e8ece9
+  }
+  .main-nav{align-self:auto}
+  .main-nav a{height:auto;min-height:42px;width:max-content}
+  .main-nav a::after{bottom:0;height:3px}
+}
+
+/* Who We Serve — industries retained as concise text rather than standalone pages */
+.industries-text-section{
+  padding:72px 0 82px;
+  background:#f7f7f4;
+  border-top:1px solid #e6eae7;
+}
+.industries-text-grid{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:86px;
+  align-items:start;
+}
+.industries-text-grid h2{
+  margin:13px 0 0;
+  max-width:480px;
+  font:400 42px/1.08 var(--serif);
+  color:var(--ink);
+}
+.industries-text-content>p{
+  margin:0;
+  max-width:690px;
+  font-size:15px;
+  line-height:1.75;
+  color:#56635e;
+}
+.industry-text-list{
+  margin:28px 0 24px;
+  display:flex;
+  flex-wrap:wrap;
+  border-top:1px solid #dfe5e1;
+  border-left:1px solid #dfe5e1;
+}
+.industry-text-list span{
+  flex:1 1 31%;
+  min-width:210px;
+  padding:17px 18px;
+  border-right:1px solid #dfe5e1;
+  border-bottom:1px solid #dfe5e1;
+  background:#fff;
+  font-size:13px;
+  color:#263b34;
+}
+.industries-text-content .industries-note{
+  font-size:12px;
+  color:#71807a;
+  max-width:700px;
+}
+
+/* Key Capabilities */
+.capabilities-overview-section{padding:78px 0 92px;background:#fff}
+.capabilities-intro-grid{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:86px;
+  align-items:start;
+  margin-bottom:40px;
+}
+.capabilities-intro-grid h2,
+.capability-principles-grid h2,
+.consultancy-intro-grid h2,
+.consultancy-services-section h2,
+.engagement-heading h2,
+.consultancy-process-grid h2{
+  margin:12px 0 0;
+  font:400 42px/1.08 var(--serif);
+  color:var(--ink);
+}
+.capabilities-intro-grid>p,
+.consultancy-intro-grid>div:last-child p,
+.engagement-heading>p{
+  margin:0 0 14px;
+  max-width:720px;
+  font-size:15px;
+  line-height:1.78;
+  color:#56635e;
+}
+.platform-capability-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  border-top:1px solid #dfe5e1;
+  border-left:1px solid #dfe5e1;
+}
+.platform-capability-grid article{
+  min-height:230px;
+  padding:26px 28px;
+  border-right:1px solid #dfe5e1;
+  border-bottom:1px solid #dfe5e1;
+  background:#fff;
+}
+.platform-capability-grid article>span,
+.consultancy-service-grid article>span,
+.engagement-model-grid article>span{
+  display:block;
+  margin-bottom:26px;
+  font-size:10px;
+  letter-spacing:.09em;
+  color:var(--section-accent-strong);
+}
+.platform-capability-grid h3,
+.consultancy-service-grid h3,
+.engagement-model-grid h3{
+  margin:0 0 12px;
+  font:400 23px/1.12 var(--serif);
+  color:var(--ink);
+}
+.platform-capability-grid p,
+.consultancy-service-grid p,
+.engagement-model-grid p{
+  margin:0;
+  font-size:13px;
+  line-height:1.7;
+  color:#5c6964;
+}
+.capability-principles-section{padding:78px 0 94px;background:#f4f6f5;border-top:1px solid #e1e6e3}
+.capability-principles-grid,
+.consultancy-process-grid{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:86px;
+  align-items:start;
+}
+.principle-list,
+.consultancy-process-list{border-top:1px solid #d8e0dc}
+.principle-list article,
+.consultancy-process-list article{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:20px;
+  padding:23px 0;
+  border-bottom:1px solid #d8e0dc;
+}
+.principle-list strong,
+.consultancy-process-list strong{
+  font-size:10px;
+  letter-spacing:.08em;
+  color:var(--section-accent-strong);
+  font-weight:500;
+}
+.principle-list h3,
+.consultancy-process-list h3{margin:0 0 7px;font:400 21px/1.15 var(--serif);color:var(--ink)}
+.principle-list p,
+.consultancy-process-list p{margin:0;font-size:13px;line-height:1.7;color:#5d6964}
+
+/* Consultancy */
+.consultancy-intro-section{padding:78px 0 70px;background:#fff}
+.consultancy-intro-grid{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:86px;
+  align-items:start;
+}
+.consultancy-services-section{padding:18px 0 94px;background:#fff}
+.consultancy-heading{margin-bottom:30px}
+.consultancy-service-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  border-top:1px solid #e1e4df;
+  border-left:1px solid #e1e4df;
+}
+.consultancy-service-grid article{
+  min-height:245px;
+  padding:28px;
+  border-right:1px solid #e1e4df;
+  border-bottom:1px solid #e1e4df;
+  background:#fff;
+  scroll-margin-top:95px;
+}
+.engagement-model-section{padding:82px 0 92px;background:#f7f5ef;border-top:1px solid #e8e1d3}
+.engagement-heading{max-width:850px;margin-bottom:34px}
+.engagement-model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.engagement-model-grid article{
+  min-height:300px;
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  border:1px solid #e1ded5;
+}
+.engagement-model-grid article.engagement-featured{
+  background:var(--section-accent-soft);
+  border-color:var(--section-accent);
+}
+.engagement-model-grid article a{
+  margin-top:auto;
+  padding-top:26px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:12px;
+  color:var(--section-accent-strong);
+}
+.engagement-model-grid article a b{font-size:16px;font-weight:400}
+.consultancy-process-section{padding:82px 0 94px;background:#fff}
+.consultancy-boundary-section{padding:31px 0;background:#f6f7f5;border-top:1px solid #e0e5e2}
+.consultancy-boundary-grid{display:grid;grid-template-columns:.45fr 1.55fr;gap:60px;align-items:start}
+.consultancy-boundary-grid p{margin:0;max-width:900px;font-size:12px;line-height:1.75;color:#65716c}
+
+@media(max-width:900px){
+  .industries-text-grid,
+  .capabilities-intro-grid,
+  .capability-principles-grid,
+  .consultancy-intro-grid,
+  .consultancy-process-grid,
+  .consultancy-boundary-grid{grid-template-columns:1fr;gap:30px}
+  .platform-capability-grid,.consultancy-service-grid{grid-template-columns:1fr}
+  .engagement-model-grid{grid-template-columns:1fr}
+  .engagement-model-grid article{min-height:230px}
+}
+@media(max-width:640px){
+  .industries-text-section,
+  .capabilities-overview-section,
+  .capability-principles-section,
+  .consultancy-intro-section,
+  .consultancy-services-section,
+  .engagement-model-section,
+  .consultancy-process-section{padding-top:52px;padding-bottom:58px}
+  .industries-text-grid h2,
+  .capabilities-intro-grid h2,
+  .capability-principles-grid h2,
+  .consultancy-intro-grid h2,
+  .consultancy-services-section h2,
+  .engagement-heading h2,
+  .consultancy-process-grid h2{font-size:35px}
+  .industry-text-list span{min-width:100%;flex-basis:100%}
+  .platform-capability-grid article,.consultancy-service-grid article{min-height:auto;padding:23px 20px}
+  .consultancy-boundary-section{padding:28px 0}
+}

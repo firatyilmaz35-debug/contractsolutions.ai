@@ -116,13 +116,19 @@ if (demoForm) {
       accentSoft: "#EDF3FF",
       accentSoft2: "#DCE7FF"
     },
+    "key-capabilities": {
+      accent: "#3D6C88",
+      accentStrong: "#2C5872",
+      accentSoft: "#EDF4F7",
+      accentSoft2: "#DCE9EF"
+    },
     "who-we-serve": {
       accent: "#17806D",
       accentStrong: "#0F6A5B",
       accentSoft: "#E8F6F2",
       accentSoft2: "#D1EEE6"
     },
-    sectors: {
+    consultancy: {
       accent: "#C58A20",
       accentStrong: "#A77218",
       accentSoft: "#FBF3E4",
@@ -158,6 +164,7 @@ if (demoForm) {
       "/subcontract-preparation-management",
       "/nda-mou-other-agreements"
     ],
+    "key-capabilities": ["/key-capabilities"],
     "who-we-serve": [
       "/who-we-serve",
       "/construction-companies",
@@ -166,18 +173,7 @@ if (demoForm) {
       "/law-firms",
       "/design-engineering-consultancies"
     ],
-    sectors: [
-      "/sectors",
-      "/rail-transportation",
-      "/infrastructure",
-      "/energy-power",
-      "/oil-gas-petrochemicals",
-      "/water-wastewater",
-      "/buildings-real-estate",
-      "/airports-aviation",
-      "/industrial-projects",
-      "/marine-shipbuilding"
-    ],
+    consultancy: ["/consultancy"],
     insights: ["/insights", "/security-data"],
     people: ["/people"]
   };

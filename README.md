@@ -290,3 +290,14 @@ then:
 - Solutions directory now contains eight modules.
 - Footer solution navigation and section-colour routing include both new pages.
 - `Open Workspace` continues to point to `https://app.contractsolutions.ai`.
+
+## UPDATE 31 — Information Architecture, Key Capabilities & Consultancy
+
+- Top navigation streamlined to: Solutions | Key Capabilities | Who We Serve | Consultancy | Insights | People.
+- Added `/key-capabilities` as a dedicated platform-capabilities page.
+- Added `/consultancy` as a dedicated professional services page, positioned after Who We Serve.
+- Added three engagement models: AI Platform, Expert Consultancy, and AI + Expert.
+- Added Industries & Sectors as a concise non-clickable text section within `/who-we-serve`.
+- Removed the standalone Sectors landing page and sector detail pages from the deployable package.
+- Footer updated to replace the Sectors column with Consultancy services.
+- Navigation accent colours updated for Key Capabilities and Consultancy.
