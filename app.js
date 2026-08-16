@@ -272,3 +272,128 @@ if (demoForm) {
     });
   });
 })();
+
+
+// UPDATE 37 — Cookie consent + consent-gated Google Analytics (Basic Consent Mode approach)
+(() => {
+  const GA_MEASUREMENT_ID = "G-SK0DSPGQ8Y";
+  const CONSENT_KEY = "csaAnalyticsConsentV1";
+  const ACCEPTED = "accepted";
+  const REJECTED = "rejected";
+
+  const readConsent = () => {
+    try { return window.localStorage.getItem(CONSENT_KEY); }
+    catch (_) { return null; }
+  };
+
+  const saveConsent = (value) => {
+    try { window.localStorage.setItem(CONSENT_KEY, value); }
+    catch (_) { /* Preference will be requested again if storage is unavailable. */ }
+  };
+
+  const loadGoogleAnalytics = () => {
+    if (window.__csaGoogleAnalyticsLoaded) return;
+    window.__csaGoogleAnalyticsLoaded = true;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_MEASUREMENT_ID);
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_MEASUREMENT_ID)}`;
+    script.dataset.csaAnalytics = 'true';
+    document.head.appendChild(script);
+  };
+
+  const clearGoogleAnalyticsCookies = () => {
+    const cookieNames = document.cookie
+      .split(';')
+      .map((item) => item.split('=')[0].trim())
+      .filter((name) => /^_ga(?:_|$)|^_gid$|^_gat/.test(name));
+
+    const host = window.location.hostname;
+    const baseDomain = host.endsWith('contractsolutions.ai') ? '.contractsolutions.ai' : null;
+
+    cookieNames.forEach((name) => {
+      document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+      if (baseDomain) {
+        document.cookie = `${name}=; Max-Age=0; path=/; domain=${baseDomain}; SameSite=Lax`;
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${baseDomain}`;
+      }
+    });
+  };
+
+  const removeBanner = () => {
+    const banner = document.getElementById('cookieConsent');
+    if (banner) banner.remove();
+  };
+
+  const applyChoice = (choice) => {
+    const analyticsWasLoaded = Boolean(window.__csaGoogleAnalyticsLoaded);
+    saveConsent(choice);
+    removeBanner();
+
+    if (choice === ACCEPTED) {
+      loadGoogleAnalytics();
+      return;
+    }
+
+    clearGoogleAnalyticsCookies();
+    // If analytics was already active because the visitor previously accepted,
+    // reload so no further analytics calls are made in this page session.
+    if (analyticsWasLoaded) window.location.reload();
+  };
+
+  const showBanner = () => {
+    removeBanner();
+
+    const banner = document.createElement('div');
+    banner.className = 'cookie-consent';
+    banner.id = 'cookieConsent';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Cookie preferences');
+    banner.setAttribute('aria-live', 'polite');
+
+    banner.innerHTML = `
+      <div class="cookie-consent__copy">
+        <strong>Cookies &amp; privacy</strong>
+        <p>We use essential technologies to operate this website and optional Google Analytics cookies to understand how visitors use Contract Solutions AI. Analytics is disabled unless you accept. <a href="https://www.contractsolutions.ai/cookie-policy">Cookie Policy</a></p>
+      </div>
+      <div class="cookie-consent__actions">
+        <button type="button" class="cookie-consent__button cookie-consent__button--reject" data-cookie-reject>Reject analytics</button>
+        <button type="button" class="cookie-consent__button cookie-consent__button--accept" data-cookie-accept>Accept analytics</button>
+      </div>`;
+
+    document.body.appendChild(banner);
+    banner.querySelector('[data-cookie-reject]').addEventListener('click', () => applyChoice(REJECTED));
+    banner.querySelector('[data-cookie-accept]').addEventListener('click', () => applyChoice(ACCEPTED));
+  };
+
+  const addSettingsLink = () => {
+    const footerPolicyLink = document.querySelector('.footer-bottom a[href="/cookie-policy"], .footer-bottom a[href="https://www.contractsolutions.ai/cookie-policy"]');
+    if (!footerPolicyLink || document.querySelector('[data-cookie-settings]')) return;
+
+    const settings = document.createElement('a');
+    settings.href = '#cookie-settings';
+    settings.textContent = 'Cookie Settings';
+    settings.dataset.cookieSettings = 'true';
+    settings.addEventListener('click', (event) => {
+      event.preventDefault();
+      showBanner();
+    });
+    footerPolicyLink.insertAdjacentElement('afterend', settings);
+  };
+
+  const init = () => {
+    const consent = readConsent();
+    if (consent === ACCEPTED) loadGoogleAnalytics();
+    else if (consent !== REJECTED) showBanner();
+    addSettingsLink();
+  };
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once:true });
+  else init();
+})();
