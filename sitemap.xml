@@ -92,4 +92,44 @@
     <loc>https://www.contractsolutions.ai/employers-developers</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-ai-construction-claims</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-fidic-contract-clauses</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-fidic-notice-requirements</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-extension-of-time-claim</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-variation-new-scope</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-ai-contract-review</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-prolongation-claims</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-fidic-vs-nec</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-project-record-dispute-file</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.contractsolutions.ai/insight-subcontract-management</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
